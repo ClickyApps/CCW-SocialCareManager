@@ -14,11 +14,13 @@
 		Care Council for Wales
 	</author>
 	
-	<preference name="orientation"              value="portrait" />
-	<preference name="target-device"            value="universal" />
-	<preference name="fullscreen"               value="true" />
-	<preference name="disable-cursor"           value="true" />
-	<preference name="android-installLocation"  value="auto" />
+	<preference name="orientation" value="portrait"/><!-- Set Default Orientation -->
+	<preference name="target-device" value="universal"/><!-- Set Device Targeting -->
+	<preference name="fullscreen" value="true"/><!-- Remove Status Bar for Android and Less Than iOS 7 -->
+	<preference name="disable-cursor" value="true"/><!-- Disable Cursor -->
+	<preference name="android-installLocation" value="auto"/><!-- Set Android Additonal Properties -->
+	<preference name="DisallowOverscroll" value="true"/><!-- Stop Overscrolling on Application -->
+	<preference name="webviewbounce" value="false"/><!-- Stop Screen Bounce on Scroll -->
 	
 	<access origin="*" />
 	<preference name="permissions" value="none"/>
@@ -43,4 +45,14 @@
 	<feature name="InAppBrowser">
 		<param name="android-package" value="org.apache.cordova.inappbrowser.InAppBrowser" />
 	</feature>
+
+	<!-- Install Status Bar Control Plugin - Removes Status Bar in iOS 7 (Set Versions to Disallow Updates Which May Render Differently) -->
+	<gap:plugin name="com.phonegap.plugin.statusbar" version="1.1.0" />
+	<preference name="StatusBarOverlaysWebView" value="false" />
+	<gap:config-file platform="ios" parent="UIStatusBarHidden">
+	    <true/>
+	</gap:config-file>
+	<gap:config-file platform="ios" parent="UIViewControllerBasedStatusBarAppearance">
+	    <false/>
+	</gap:config-file>
 </widget>
