@@ -70,7 +70,7 @@ ol li { color: #1f1f21; }
 .content ul { padding-left: 26px; }
 .content ul li { color: #1f1f21; }
 
-header { position: fixed; top: 0; left: 0; right: 0; height: 61px; background-color: #BF1E2E; padding: 25px 5% 0; }
+header { position: fixed; top: 0; left: 0; right: 0; height: 61px; background-color: #BF1E2E; padding: 25px 5% 0; -webkit-backface-visibility: hidden; }
 header a { color: #fff; }
 header a.open_menu { float: right; text-indent: -9999px; background-image: url(img/menu_icon.png); background-repeat: no-repeat; -webkit-background-size: 100%; background-size: 100%; width: 18px; margin-top: 2px; }
 header a.back { position: relative; }
